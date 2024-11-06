@@ -1,0 +1,16 @@
+[run]
+# Include files from the main source directory for coverage
+source = inventory_system
+
+# Omit virtual environment or other external directories
+omit = 
+    */tests/*
+    */__init__.py
+
+branch  = True
+
+[report]
+# Show missing lines in the report
+show_missing = True
+
+
