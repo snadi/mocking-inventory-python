@@ -52,3 +52,9 @@ def test_update_quantity_below(inventory, mock_database_service, product, mock_n
     mock_database_service.save_product.assert_called_once
     mock_notification_service.send_notification.assert_called_once()
     assert product.get_quantity() == 3
+
+def test_update_nonexisting(inventory, mock_database_service, product, mock_notification_service):
+    inventory.update_quantity(1, 3)
+    mock_database_service.save_product.assert_not_called()
+    mock_notification_service.send_notification.assert_not_called()
+    assert inventory.get_product_by_id(1) is None
