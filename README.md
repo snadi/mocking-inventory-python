@@ -26,13 +26,13 @@ pip install -r requirements.txt
 3. Run the unit tests
 
 ```bash
-python -m unittest
+pytest
 ```
 
 4. Generate a coverage report
 
 ```
-coverage run -m unittest
+coverage run -m pytest
 coverage html
 ```
 
