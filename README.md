@@ -46,16 +46,18 @@ The first command will generate the coverage report in your terminal. The second
 
 ## Your Task
 
-You want to add tests for the `Inventory` class in `inventory.py`, but notice how neither DatabaseService nor NotificationService have any concrete implementations. Eventually, these classes will communicate with external services so we don't want to call them yet while unit testing inventory.
+You want to add tests for the `Inventory` class in `inventory.py`, but notice how neither DatabaseService nor NotificationService have any concrete implementations yet. Even when these classes are eventually implemented, theywill communicate with external services so we don't want to have their code execute while unit testing inventory.
 
-Your goal is to test that the Inventory class does what it's supposed to do, even though these services are not yet implemented. Accordingly, you will use mocks and stubs to implement your tests.
+Your goal is to test that the Inventory class does what it's supposed to do, even though these services are not yet implemented. Accordingly, you will use mocking to implement your tests.
 
-You should be able to get 100% coverage for the Inventory class. You should think about the behavior you want to make sure happens when testing (e.g., when we add inventory, we want to make sure the Inventory class actually save things in the Database or that it sent notifications when it's supposed to send them but not in other times.)
+You should be able to get 100% coverage for the Inventory class. You should think about the behavior you want to make sure happens when testing (e.g., when we add inventory, we want to make sure the Inventory class actually tells the DatabaseService class that it should store things in the DB or that it sent notifications when it's supposed to send them but not in other times.)
 
 Go about the task systematically:
 
 1, first explore the code and understand what each class is doing and how the classes interact with each other
 2. run the current tests and observe the current coverage
-3. take each function in the Inventory class and write tests for it to ensure its coverage and to ensure it covers the different expected behavior based on its specs (i.e., the docttring comments). 
+3. take each function in the Inventory class and write tests for it to ensure its coverage and to ensure it covers the different expected behavior based on its specs (i.e., the docstring comments). 
+
+Use slides 16 - 22 to guide you on what your test might look like.
 
 See [unittest.mock](https://docs.python.org/3/library/unittest.mock.html) for documentation of the mocking library used and which methods and actions are available to you.
