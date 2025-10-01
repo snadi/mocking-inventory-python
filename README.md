@@ -56,7 +56,7 @@ Go about the task systematically:
 
 1, first explore the code and understand what each class is doing and how the classes interact with each other
 2. run the current tests and observe the current coverage
-3. take each function in the Inventory class and write tests for it to ensure its coverage and to ensure it covers the different expected behavior based on its specs (i.e., the docstring comments). 
+3. take each function in the Inventory class and write tests for it to ensure its coverage and to ensure it covers the different expected behavior based on its specs (i.e., the docstring comments). Remember that it's a good practice to have tests for each "unit" in a separate file so you will need to create a new file `test_inventory.py` for your new tests. 
 
 Use slides 16 - 22 to guide you on what your test might look like.
 
