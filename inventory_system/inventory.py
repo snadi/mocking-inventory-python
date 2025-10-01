@@ -25,7 +25,7 @@ class Inventory:
         Update the quantity of a product.
         If the quantity is below the LOW_STOCK_THRESHOLD, send a notification.
         """
-        product = self.products.get(product_id)
+        product = self.get_product_by_id(product_id)
         if product:
             product.set_quantity(new_quantity)
             self.database_service.save_product(product)
